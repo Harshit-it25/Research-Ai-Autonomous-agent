@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-research-accent: #6366f1;
+  --color-research-bg: #090a0d;
+  --color-research-card: #11141b;
+  --color-research-border: #1e293b; /* slate-800 */
+}
+
+@layer base {
+  body {
+    @apply bg-research-bg text-slate-400 font-sans;
+  }
+}
+
+.markdown-body {
+  @apply font-serif leading-relaxed text-slate-300;
+}
+
+.markdown-body h1 {
+  @apply text-3xl font-bold font-sans text-white mt-8 mb-4 border-b border-slate-800 pb-2;
+}
+
+.markdown-body h2 {
+  @apply text-2xl font-semibold font-sans text-white mt-6 mb-3;
+}
+
+.markdown-body h3 {
+  @apply text-xl font-semibold font-sans text-indigo-400 mt-4 mb-2;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply ml-6 mb-4 list-disc;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-indigo-600 pl-4 italic text-slate-500 my-4 bg-indigo-500/5 py-2 pr-4 rounded-r-lg;
+}
+
+.markdown-body code {
+  @apply font-mono bg-slate-900 border border-slate-800 px-1.5 rounded text-sm text-indigo-300;
+}
+
+.bento-card {
+  @apply bg-research-card border border-research-border rounded-2xl shadow-2xl;
+}
+
+.mono-tag {
+  @apply px-2 py-0.5 bg-indigo-500/10 text-indigo-400 text-[10px] font-mono border border-indigo-500/20 rounded uppercase tracking-tighter;
+}
+
